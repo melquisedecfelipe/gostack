@@ -42,7 +42,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/melquisedecfelipe/gostack
 
 # Go into the repository
-$ cd gostack
+$ cd gostack/concepts
 
 # Go into the backend and install dependencies
 $ cd backend && yarn

@@ -2,33 +2,33 @@ const request = require("supertest");
 const app = require("../app");
 const { isUuid } = require("uuidv4");
 
-describe("Projects", () => {
+describe("Repositories", () => {
   it("should be able to create a new repository", async () => {
     const response = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/melquisedecfelipe/pokecurrency",
-        title: "Poke Currency",
-        techs: ["React", "TypeScript"],
+        url: "https://github.com/Rocketseat/umbriel",
+        title: "Umbriel",
+        techs: ["Node", "Express", "TypeScript"],
       });
 
     expect(isUuid(response.body.id)).toBe(true);
 
     expect(response.body).toMatchObject({
-      url: "https://github.com/melquisedecfelipe/pokecurrency",
-      title: "Poke Currency",
-      techs: ["React", "TypeScript"],
+      url: "https://github.com/Rocketseat/umbriel",
+      title: "Umbriel",
+      techs: ["Node", "Express", "TypeScript"],
       likes: 0,
     });
   });
 
-  it("should be able to list the projects", async () => {
+  it("should be able to list the repositories", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/melquisedecfelipe/pokecurrency",
-        title: "Poke Currency",
-        techs: ["React", "TypeScript"],
+        url: "https://github.com/Rocketseat/umbriel",
+        title: "Umbriel",
+        techs: ["Node", "Express", "TypeScript"],
       });
 
     const response = await request(app).get("/repositories");
@@ -37,9 +37,9 @@ describe("Projects", () => {
       expect.arrayContaining([
         {
           id: repository.body.id,
-          url: "https://github.com/melquisedecfelipe/pokecurrency",
-          title: "Poke Currency",
-          techs: ["React", "TypeScript"],
+          url: "https://github.com/Rocketseat/umbriel",
+          title: "Umbriel",
+          techs: ["Node", "Express", "TypeScript"],
           likes: 0,
         },
       ])
@@ -50,25 +50,25 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/melquisedecfelipe/pokecurrency",
-        title: "Poke Currency",
-        techs: ["React", "TypeScript"],
+        url: "https://github.com/Rocketseat/umbriel",
+        title: "Umbriel",
+        techs: ["Node", "Express", "TypeScript"],
       });
 
     const response = await request(app)
       .put(`/repositories/${repository.body.id}`)
       .send({
-        url: "https://github.com/melquisedecfelipe/cra-template-react-template",
-        title: "React Template",
-        techs: ["Axios", "Commitizen", "Eslint", "React"],
+        url: "https://github.com/Rocketseat/unform",
+        title: "Unform",
+        techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
       });
 
     expect(isUuid(response.body.id)).toBe(true);
 
     expect(response.body).toMatchObject({
-      url: "https://github.com/melquisedecfelipe/cra-template-react-template",
-      title: "React Template",
-      techs: ["Axios", "Commitizen", "Eslint", "React"],
+      url: "https://github.com/Rocketseat/unform",
+      title: "Unform",
+      techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
     });
   });
 
@@ -80,9 +80,9 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/melquisedecfelipe/cra-template-react-template",
-        title: "React Template",
-        techs: ["Axios", "Commitizen", "Eslint", "React"],
+        url: "https://github.com/Rocketseat/umbriel",
+        title: "Umbriel",
+        techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
       });
 
     const response = await request(app)
@@ -97,11 +97,13 @@ describe("Projects", () => {
   });
 
   it("should be able to delete the repository", async () => {
-    const response = await request(app).post("/repositories").send({
-      title: "Front-end em React",
-      description: "Um software para listagem de projetos em React",
-      owner: "Melquisedec Felipe",
-    });
+    const response = await request(app)
+      .post("/repositories")
+      .send({
+        url: "https://github.com/Rocketseat/umbriel",
+        title: "Umbriel",
+        techs: ["Node", "Express", "TypeScript"],
+      });
 
     await request(app).delete(`/repositories/${response.body.id}`).expect(204);
 

@@ -3,11 +3,13 @@ const app = require("../app");
 
 describe("Likes", () => {
   it("should be able to give a like to the repository", async () => {
-    const repository = await request(app).post("/repositories").send({
-      title: "Mobile em React Native",
-      description: "Um aplicativo para listagem de projetos em React Native",
-      owner: "Melquisedec Felipe",
-    });
+    const repository = await request(app)
+      .post("/repositories")
+      .send({
+        url: "https://github.com/Rocketseat/umbriel",
+        title: "Umbriel",
+        techs: ["Node", "Express", "TypeScript"],
+      });
 
     let response = await request(app).post(
       `/repositories/${repository.body.id}/like`

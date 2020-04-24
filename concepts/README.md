@@ -33,6 +33,11 @@ Backend
 - [Express](https://expressjs.com/)
 - [Nodemon](https://nodemon.io/)
 
+Frontend
+
+- [Axios](https://github.com/axios/axios)
+- [React](https://reactjs.org/)
+
 ## :information_source: How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16](https://nodejs.org/) or higher + [Yarn v1.13](https://yarnpkg.com/) or higher installed on your computer. From your command line:
@@ -51,6 +56,15 @@ $ cd backend && yarn
 $ yarn dev
 
 # Run backend tests
+$ yarn test
+
+# Go into the frontend and install dependencies
+$ cd ../frontend && yarn
+
+# Run frontend
+$ yarn start
+
+# Run frontend tests
 $ yarn test
 ```
 

@@ -35,6 +35,16 @@ Backend
 - [Express](https://expressjs.com/)
 - [Nodemon](https://nodemon.io/)
 
+Frontend
+
+- [Axios](https://github.com/axios/axios)
+- [React](https://reactjs.org/)
+
+Mobile
+
+- [Axios](https://github.com/axios/axios)
+- [React native](https://facebook.github.io/react-native/)
+
 ## :books: Summary
 
 - [01 - Concepts](https://github.com/melquisedecfelipe/gostack/tree/master/concepts)

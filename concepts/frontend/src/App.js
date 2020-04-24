@@ -6,6 +6,16 @@ import "./styles.css";
 function App() {
   const [repostiories, setRepositories] = useState([]);
 
+  useEffect(() => {
+    async function getRepositories() {
+      const { status, data } = await api.get("/repositories");
+
+      if (status === 200) setRepositories(data);
+    }
+
+    getRepositories();
+  }, []);
+
   async function handleAddRepository() {
     const body = {
       title: `Desafio React ${Math.random().toFixed(5)}`,
@@ -27,16 +37,6 @@ function App() {
 
     setRepositories(updatedRepostiories);
   }
-
-  useEffect(() => {
-    async function getRepositories() {
-      const { status, data } = await api.get("/repositories");
-
-      if (status === 200) setRepositories(data);
-    }
-
-    getRepositories();
-  }, []);
 
   return (
     <div>

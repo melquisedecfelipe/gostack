@@ -32,8 +32,11 @@ This project was developed with the following technologies:
 
 Backend
 
+- [Eslint](https://eslint.org/)
 - [Express](https://expressjs.com/)
 - [Nodemon](https://nodemon.io/)
+- [Prettier](https://prettier.io/)
+- [Typescript](https://www.typescriptlang.org/)
 
 Frontend
 

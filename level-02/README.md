@@ -30,8 +30,9 @@ This project was developed with the following technologies:
 
 Backend
 
-- [Express](https://expressjs.com/)
-- [Nodemon](https://nodemon.io/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Typescript](https://www.typescriptlang.org/)
 
 ## :information_source: How To Use
 

@@ -1,4 +1,4 @@
-<h1>Level 01</h1>
+<h1>Fundamentals</h1>
 
 <p>
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/gostack.svg">
@@ -30,18 +30,9 @@ This project was developed with the following technologies:
 
 Backend
 
-- [Express](https://expressjs.com/)
-- [Nodemon](https://nodemon.io/)
-
-Frontend
-
-- [Axios](https://github.com/axios/axios)
-- [React](https://reactjs.org/)
-
-Mobile
-
-- [Axios](https://github.com/axios/axios)
-- [React native](https://facebook.github.io/react-native/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Typescript](https://www.typescriptlang.org/)
 
 ## :information_source: How To Use
 
@@ -52,7 +43,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/melquisedecfelipe/gostack
 
 # Go into the repository
-$ cd gostack/level-01
+$ cd gostack/fundamentals
 
 # Go into the backend and install dependencies
 $ cd backend && yarn
@@ -61,15 +52,6 @@ $ cd backend && yarn
 $ yarn dev
 
 # Run backend tests
-$ yarn test
-
-# Go into the frontend and install dependencies
-$ cd ../frontend && yarn
-
-# Run frontend
-$ yarn start
-
-# Run frontend tests
 $ yarn test
 ```
 

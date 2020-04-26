@@ -1,4 +1,4 @@
-<h1>Conceitos</h1>
+<h1>Level 01</h1>
 
 <p>
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/gostack.svg">
@@ -52,7 +52,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/melquisedecfelipe/gostack
 
 # Go into the repository
-$ cd gostack/concepts
+$ cd gostack/level-01
 
 # Go into the backend and install dependencies
 $ cd backend && yarn

@@ -51,6 +51,7 @@ Mobile
 ## :books: Summary
 
 - [01 - Concepts](https://github.com/melquisedecfelipe/gostack/tree/master/concepts)
+- [02 - Fundamentals](https://github.com/melquisedecfelipe/gostack/tree/master/fundamentals)
 
 ## :memo: License
 

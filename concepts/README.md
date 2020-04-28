@@ -71,6 +71,15 @@ $ yarn start
 
 # Run frontend tests
 $ yarn test
+
+# Go into the mobile and install dependencies
+$ cd ../mobile && yarn
+
+# Run mobile
+$ yarn start
+
+# Run mobile tests
+$ yarn test
 ```
 
 ## :memo: License

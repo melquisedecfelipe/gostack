@@ -15,13 +15,9 @@ export default function App() {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    async function getRepositories() {
-      const { status, data } = await api.get("/repositories");
-
-      if (status === 200) setRepositories(data);
-    }
-
-    getRepositories();
+    api.get("/repositories").then(response => {
+      setRepositories(response.data);
+    });
   }, []);
 
   async function handleLikeRepository(id) {
